@@ -18,7 +18,7 @@ prompts = [
 # Fungsi untuk mengirim permintaan ke model GPT-3.5 dengan prompt acak
 def chat_with_model(prompts):
     prompt = random.choice(prompts)  # Memilih prompt secara acak
-    response = openai.Completion.create(
+    response = openai.Chat.create(
         engine="text-davinci-002",
         prompt=prompt,
         max_tokens=50,
